@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #E0E0E0;
+  background-color: #121212;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B0000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B6B;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced gradient backgrounds with movement */
+.gradient-bg {
+  background: linear-gradient(135deg, #8B0000 0%, #FF6B6B 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #8B0000 0%, #FF6B6B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient backgrounds */
+.animated-gradient {
+  background: linear-gradient(-45deg, #121212, #1E1E2E, #2A2A3A, #1E1E2E);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.animated-gradient-accent {
+  background: linear-gradient(-45deg, #8B0000, #FF6B6B, #8B0000, #FF6B6B);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Parallax scrolling effects */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-slow {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax-medium {
+  transform: translateZ(-0.5px) scale(1.5);
+}
+
+/* Subtle background patterns */
+.bg-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(139, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 0, 0, 0.05) 0%, transparent 50%);
+  animation: patternFloat 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes patternFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+/* Floating particles effect */
+.floating-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-particles::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 107, 107, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(139, 0, 0, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 107, 107, 0.4), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(139, 0, 0, 0.3), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255, 107, 107, 0.2), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particleFloat 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* Dark theme custom styles */
+.dark-card {
+  background: rgba(30, 30, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-hover {
+  transition: all 0.3s ease;
+}
+
+.dark-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 0, 0, 0.3);
+}
+
+/* Sophisticated button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #8B0000 0%, #FF6B6B 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #8B0000;
+  border: 2px solid #8B0000;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #8B0000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.stagger-animation {
+  animation: staggerIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(139, 0, 0, 0.2);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Section backgrounds with enhanced effects */
+.section-bg-primary {
+  background: linear-gradient(135deg, #121212 0%, #1E1E2E 100%);
+  position: relative;
+}
+
+.section-bg-secondary {
+  background: linear-gradient(135deg, #1E1E2E 0%, #2A2A3A 100%);
+  position: relative;
+}
+
+.section-bg-tertiary {
+  background: linear-gradient(135deg, #2A2A3A 0%, #1E1E2E 100%);
+  position: relative;
+}
+
+/* Content overlay to ensure readability */
+.content-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* Smooth parallax scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  .parallax-bg {
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-gradient,
+  .animated-gradient-accent,
+  .floating-particles::after,
+  .bg-pattern::before {
+    animation: none;
+  }
+}
