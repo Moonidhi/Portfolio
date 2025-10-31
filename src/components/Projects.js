@@ -14,8 +14,8 @@ const Projects = () => {
       featured: true,
     },
     {
-      title: 'DSA Practice Repository',
-      description: 'Comprehensive collection of Data Structure and Algorithm solutions in C++. Includes implementations of various algorithms, data structures, and problem-solving techniques.',
+      title: 'Civic Issue Manager',
+      description: 'A web-based platform that allows citizens to report and track civic issues like potholes, garbage overflow, and streetlight failures, helping local authorities respond efficiently.',
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       technologies: ['C++', 'Data Structures', 'Algorithms', 'Problem Solving'],
       github: 'https://github.com/Moonidhi/DSA',
