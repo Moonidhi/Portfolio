@@ -166,7 +166,7 @@ const Achievements = () => {
                 { number: '6', label: 'Certifications & Achievements' },
                 { number: '2', label: 'Professional Certifications' },
                 { number: '100%', label: 'Commitment to Learning' },
-                { number: '3+', label: 'Years Experience' },
+                { number: '1+', label: 'Years Experience' },
               ].map((stat, index) => (
                 <div key={stat.label}>
                   <div className="text-3xl font-bold mb-2">{stat.number}</div>
