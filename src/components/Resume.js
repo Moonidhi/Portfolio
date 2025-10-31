@@ -6,8 +6,8 @@ const Resume = () => {
   const handleDownload = () => {
     // Create a temporary link to trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your actual resume PDF to the public folder
-    link.download = 'Your_Name_Resume.pdf';
+    link.href = '/Resume.pdf'; // You'll need to add your actual resume PDF to the public folder
+    link.download = 'Sunidhi_Chauhan_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -76,15 +76,15 @@ const Resume = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8 text-sm text-blue-100">
               <div>
                 <div className="font-semibold text-white mb-1">Experience</div>
-                <div>3+ Years</div>
+                <div>1+ Years</div>
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Projects</div>
-                <div>50+ Completed</div>
+                <div>5+ Completed</div>
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Skills</div>
-                <div>15+ Technologies</div>
+                <div>10+ Technologies</div>
               </div>
             </div>
 
